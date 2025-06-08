@@ -11,7 +11,7 @@ const props = defineProps({
     }
 });
 
-const emit = defineEmits(['update-position']); 
+const emit = defineEmits(['update-position']);
 const { isDraggable, canvasPosition } = useStickers();
 const elementRef = ref(null);
 
@@ -19,7 +19,7 @@ watch(() => props.sticker.position, (newPosition) => {
     if (newPosition) {
         position.value = { ...newPosition };
     }
-}, { deep: true }); 
+}, { deep: true });
 
 const position = ref({ ...props.sticker.position });
 const isDragging = ref(false);
@@ -32,7 +32,7 @@ let offsetY = 0;
 const onMouseDown = (event) => {
     if (!isDraggable.value || !elementRef.value) return;
     isDragging.value = true;
-    zIndex.value = 100; 
+    zIndex.value = 100;
     const rect = elementRef.value.getBoundingClientRect();
     offsetX = event.clientX - rect.left;
     offsetY = event.clientY - rect.top;
@@ -50,7 +50,7 @@ const onMouseUp = () => {
     if (!isDragging.value) return;
     isDragging.value = false;
     zIndex.value = 1;
-    
+
     emit('update-position', { id: props.sticker.id, position: position.value });
 
     window.removeEventListener('mousemove', onMouseMove);
@@ -81,7 +81,7 @@ const onTouchEnd = () => {
     if (!isDragging.value) return;
     isDragging.value = false;
     zIndex.value = 1;
-    
+
     emit('update-position', { id: props.sticker.id, position: position.value });
 
     window.removeEventListener('touchmove', onTouchMove);
@@ -131,32 +131,30 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div
-        ref="elementRef"
-        :class="stickerClasses"
-        :style="stickerStyle"
-        @mousedown="onMouseDown"
-        @touchstart="onTouchStart"
-    >
+    <div ref="elementRef" :class="stickerClasses" :style="stickerStyle" @mousedown="onMouseDown"
+        @touchstart="onTouchStart">
         <template v-if="sticker.type === 'note'">
             {{ sticker.content }}
         </template>
 
         <template v-if="sticker.type === 'imageNote'">
-            <img :src="sticker.content" :alt="sticker.options.imageDescription" :style="{ width: sticker.options.imageWidth, height: sticker.options.imageHeight || 'auto' }">
+            <img :src="sticker.content" :alt="sticker.options.imageDescription"
+                :style="{ width: sticker.options.imageWidth, height: sticker.options.imageHeight || 'auto' }">
             <p v-if="sticker.options.imageDescription">{{ sticker.options.imageDescription }}</p>
+            <div v-if="sticker.options.userName" class="quote-user-name">- {{ sticker.options.userName }}</div>
         </template>
 
         <template v-if="sticker.type === 'imageSticker'">
-            <img :src="sticker.content" :style="{ width: sticker.options.imageWidth, height: sticker.options.imageHeight || 'auto' }">
+            <img :src="sticker.content"
+                :style="{ width: sticker.options.imageWidth, height: sticker.options.imageHeight || 'auto' }">
         </template>
-        
+
         <template v-if="sticker.type === 'timeNote'">
             <div class="mark-time">{{ currentTime }}</div>
             <div class="mark-date">{{ currentDate }}</div>
         </template>
         <template v-if="sticker.type === 'quotenote'">
-           <div>{{ sticker.content }}</div>
+            <div>{{ sticker.content }}</div>
             <div class="quote-user-name">- {{ sticker.options.userName }}</div>
         </template>
     </div>
@@ -170,14 +168,16 @@ onUnmounted(() => {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15), inset 0 0 20px rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(10px);
     padding: 20px;
-    user-select: none; /* 防止文本选择 */
+    user-select: none;
+    /* 防止文本选择 */
 }
- .quote-user-name {
+
+.quote-user-name {
     font-style: italic;
     opacity: 0.5;
     text-align: right;
     margin-top: 10px;
- }
+}
 
 .sticker:active {
     cursor: grabbing;
@@ -189,20 +189,23 @@ onUnmounted(() => {
     line-height: 1.5;
     white-space: pre-wrap;
 }
+
 .quotenote {
     width: 250px;
     min-height: 150px;
     line-height: 1.5;
     white-space: pre-wrap;
 }
+
 .imageNote {
     line-height: 1.5;
 }
+
 .imageNote p {
     font-size: 13px;
     text-align: center;
     margin-top: 10px;
-    color: rgba(0,0,0,0.6);
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .imageSticker {
@@ -216,12 +219,14 @@ onUnmounted(() => {
     text-align: center;
     padding: 20px 30px;
 }
+
 .mark-time {
     font-family: "digital-7", monospace;
     font-size: 48px;
     font-weight: 900;
     letter-spacing: 5px;
 }
+
 .mark-date {
     font-family: "digital-7", monospace;
     font-size: 18px;
@@ -231,6 +236,19 @@ onUnmounted(() => {
 .mark-filter1 {
     filter:
         drop-shadow(2px 0px 0 #FF00FF) drop-shadow(-4px 0px 0 #00FFFF) drop-shadow(0px 5px 0 #00FF00) drop-shadow(0px -2px 0 #FF0000) drop-shadow(6px 2px 0 #FFFF00) drop-shadow(-2px -5px 0 #FF7F00) drop-shadow(2px -7px 0 #0000FF) drop-shadow(-6px 6px 0 #8B00FF);
+}
+
+/* 大字 */
+.mark-filter3 {
+    font-size: 24px;
+
+}
+
+/* 小字单行 */
+.mark-filter4 {
+    font-size: 10px;
+    min-height: 10px;
+    text-align: center;
 }
 
 .mark-style2 {
@@ -248,4 +266,3 @@ onUnmounted(() => {
     -webkit-text-fill-color: transparent;
 }
 </style>
-[file content end]

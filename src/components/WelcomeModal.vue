@@ -15,7 +15,7 @@ const emit = defineEmits(['close']);
         <div>👂 We listen,We don't judge.</div>
         <div>🌿 Keep harmonious words.</div>
         <div>📖 Leave some thoughts for our high school life.</div>
-        <div>🌟 Share everyone's messages.</div>
+        <div>🌟 Share experience for school life.</div>
       </div>
       <button class="primary" @click="emit('close')">Got it!</button>
     </div>

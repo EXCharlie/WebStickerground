@@ -1,5 +1,4 @@
-[file name]: App.vue
-[file content begin]
+
 <script setup>
 import { onMounted,onUnmounted, computed, ref } from 'vue';
 import { useStickers } from './composables/useStickers';
@@ -34,7 +33,6 @@ const backgroundStyle = computed(() => ({
     backgroundRepeat: 'no-repeat',
 }));
 
-// 鼠标事件处理
 const onCanvasMouseDown = (e) => {
     if (e.target.id === 'stickerground') {
         isDraggingCanvas.value = true;
@@ -85,11 +83,10 @@ const onTouchEnd = () => {
 };
 
 onMounted(() => {
-    // 鼠标事件监听
+
     window.addEventListener('mousemove', onCanvasMouseMove);
     window.addEventListener('mouseup', onCanvasMouseUp);
     
-    // 触摸事件监听
     window.addEventListener('touchmove', onTouchMove, { passive: false });
     window.addEventListener('touchend', onTouchEnd);
 
@@ -117,6 +114,7 @@ const stickerContainerStyle = computed(() => ({
 </script>
 
 <template>
+   <div class="app" v-title title="这是标题"></div>
     <div 
         id="stickerground" 
         :style="backgroundStyle"

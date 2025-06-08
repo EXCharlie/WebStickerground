@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 const stickers = ref([]);
 const backgroundImageUrl = ref('');
 const pageBackgroundColor = ref('#f0f0f0'); 
-const isDraggable = ref(true);
+const isDraggable = ref(false);
 const canvasPosition = ref({ x: 0, y: 0 }); // 新增画布位置状态
 
 export function useStickers() {
