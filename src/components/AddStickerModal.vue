@@ -11,6 +11,7 @@ const backgroundColor = ref('#ffffff');
 const imageDescription = ref('');
 const imageWidth = ref('200px');
 const customStyleName = ref('');
+const userName = ref('');
 
 const handleSubmit = () => {
   if (!content.value && (type.value === 'note' || type.value.startsWith('image'))) {
@@ -25,7 +26,8 @@ const handleSubmit = () => {
       backgroundColor: backgroundColor.value,
       imageDescription: imageDescription.value,
       imageWidth: imageWidth.value,
-      customStyleName: customStyleName.value
+      customStyleName: customStyleName.value,
+      userName: userName.value
     }
   };
   
@@ -38,6 +40,9 @@ const handleSubmit = () => {
   <div class="modal-overlay" @click.self="emit('close')">
     <div class="modal-content">
       <h2>Create New Sticker</h2>
+      <div class="feature-list">
+        <div>This is for testing only and will not be saved to any server.</div>
+      </div>
       <form @submit.prevent="handleSubmit">
         <label>Type:</label>
         <select v-model="type">
@@ -45,6 +50,7 @@ const handleSubmit = () => {
           <option value="timeNote">Time Note</option>
           <option value="imageNote">Image Note</option>
           <option value="imageSticker">Image Sticker</option>
+          <option value="quotenote">Quote Note</option>
         </select>
         
         <label v-if="type.startsWith('image')">Image URL:</label>
@@ -52,6 +58,10 @@ const handleSubmit = () => {
         
         <label v-if="type === 'note'">Content:</label>
         <textarea v-if="type === 'note'" v-model="content" rows="4"></textarea>
+        <label v-if="type === 'quotenote'">Content:</label>
+        <textarea v-if="type === 'quotenote'" v-model="content" rows="4"></textarea>
+        <label v-if="type === 'quotenote'">User Name:</label>
+        <input v-if="type === 'quotenote'" type="text" v-model="userName">
 
         <label v-if="type === 'imageNote'">Image Description:</label>
         <input v-if="type === 'imageNote'" type="text" v-model="imageDescription">
@@ -134,5 +144,22 @@ button {
 button[type="submit"] {
   background-color: #007aff;
   color: white;
+}
+
+.feature-list {
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.95em;
+  color: rgba(255, 0, 0, 0.8);
+}
+
+.feature-list div {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 10px 15px;
+  border-radius: 10px;
 }
 </style>

@@ -5,16 +5,17 @@ const emit = defineEmits(['close']);
 </script>
 
 <template>
+
   <div class="modal-overlay">
     <div class="modal-content welcome-modal">
-      <h2>Welcome to Stickerground! 👋</h2>
-      <p>This is your personal digital canvas for notes, ideas, and fun.</p>
+      <h2>Welcome to Messagesground! 👋</h2>
+      <p>Some people say that the holiday during the college entrance examination is the last dinner（最后的晚餐） for senior high
+        school sophomores. Share your thoughts.</p>
       <div class="feature-list">
-        <div>📝 **Add Notes:** Click the `+` button to add new stickers.</div>
-        <div>👆 **Drag & Resize:** Drag stickers to move them, and use the resize handles to change their size.</div>
-        <div>⚙️ **Settings:** Customize the background with images or colors, and lock/unlock stickers for easy viewing.</div>
-        <div>💾 **Import/Export:** Save your canvas or load previous creations from the settings.</div>
-        <div>🤏 **Pan & Zoom:** On touch devices, use two fingers to pan and pinch to zoom. On desktop, drag the background and use scroll wheel.</div>
+        <div>👂 We listen,We don't judge.</div>
+        <div>🌿 Keep harmonious words.</div>
+        <div>📖 Leave some thoughts for our high school life.</div>
+        <div>🌟 Share everyone's messages.</div>
       </div>
       <button class="primary" @click="emit('close')">Got it!</button>
     </div>
@@ -28,21 +29,23 @@ const emit = defineEmits(['close']);
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay for welcome */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Slightly darker overlay for welcome */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1002; /* Higher z-index than settings modal */
+  z-index: 1002;
+  /* Higher z-index than settings modal */
 }
 
 .modal-content {
   background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(20px); 
+  backdrop-filter: blur(20px);
   padding: 30px;
   border-radius: 20px;
   width: 90%;
   max-width: 500px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.3); 
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -68,12 +71,13 @@ p {
   gap: 10px;
   font-size: 0.95em;
   color: #666;
+  font-weight: bold;
 }
 
 .feature-list div {
-    background-color: rgba(0, 0, 0, 0.05);
-    padding: 10px 15px;
-    border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 10px 15px;
+  border-radius: 10px;
 }
 
 button.primary {

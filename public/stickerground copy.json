@@ -1,0 +1,46 @@
+{
+  "backgroundImageUrl": "/images/background1.png",
+  "canvasPosition": { "x": 0, "y": 0 },
+  "stickers": [
+    {
+      "id": "7",
+      "position": { "x": 100, "y": 30 },
+      "type": "quotenote",
+      "content": "but Alexander,\nI’ll never forget the first\ntime I saw your face.\nI have never been the same,\nIntelligent eyes in a hunger - pang frame,\nAnd when you said “Hi,” I forgot my dang name,\nset my heart aflame, every part aflame,\nThis is not a game…",
+      "options": {
+        "backgroundColor": "rgba(254, 178, 1,0.7)",
+        "userName": "Alexander"
+      }
+    },
+    {
+      "id": "2",
+      "position": { "x": 400, "y": 50 },
+      "type": "imageNote",
+      "content": "/images/002.png",
+      "options": {
+        "imageWidth": "300px",
+        "backgroundColor": "#ffff99",
+        "imageDescription": "This is the musical, Rocky Red and Black"
+      }
+    },
+    {
+      "id": "3",
+      "position": { "x": 800, "y": 80 },
+      "type": "timeNote",
+      "content": null,
+      "options": {
+        "backgroundColor": "white"
+      }
+    },
+    {
+      "id": "4",
+      "position": { "x": 450, "y": 450 },
+      "type": "imageSticker",
+      "content": "/images/007.png",
+      "options": {
+        "imageWidth": "160px",
+        "customStyleName": "filter1"
+      }
+    }
+  ]
+}

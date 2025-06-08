@@ -1,44 +1,57 @@
 {
   "backgroundImageUrl": "/images/background1.png",
+  "canvasPosition": { "x": 0, "y": 0 },
   "stickers": [
     {
-      "id": "1",
-      "position": { "x": 100, "y": 30 },
-      "type": "note",
-      "content": "but Alexander,\nI’ll never forget the first\ntime I saw your face.\nI have never been the same,\nIntelligent eyes in a hunger - pang frame,\nAnd when you said “Hi,” I forgot my dang name,\nset my heart aflame, every part aflame,\nThis is not a game…",
+      "id": "10",
+      "position": { "x": 100, "y": 100 },
+      "type": "quotenote",
+      "content": "是断头饭",
       "options": {
-        "backgroundColor": "rgba(254, 178, 1,0.7)"
+        "backgroundColor": "rgba(255, 204, 204, 0.7)",
+        "userName": "基层群众自闭"
       }
     },
     {
-      "id": "2",
-      "position": { "x": 400, "y": 50 },
-      "type": "imageNote",
-      "content": "/images/002.png",
+      "id": "11",
+      "position": { "x": 400, "y": 100 },
+      "type": "quotenote",
+      "content": "#fyp#中中混血#美式男孩yh#justnow#in my feelings#卷毛#微分碎盖",
       "options": {
-        "imageWidth": "300px",
-        "backgroundColor": "#ffff99",
-        "imageDescription": "This is the musical, Rocky Red and Black"
+        "backgroundColor": "rgba(204, 255, 204, 0.7)",
+        "userName": "Echo"
       }
     },
     {
-      "id": "3",
-      "position": { "x": 800, "y": 80 },
-      "type": "timeNote",
-      "content": null,
+      "id": "12",
+      "position": { "x": 700, "y": 100 },
+      "type": "quotenote",
+      "content": "做你自己，凌驾伤痕",
       "options": {
-        "backgroundColor": "white"
+        "backgroundColor": "rgba(204, 204, 255, 0.7)",
+        "userName": "Darwin"
       }
     },
     {
-      "id": "4",
-      "position": { "x": 450, "y": 450 },
-      "type": "imageSticker",
-      "content": "/images/007.png",
+      "id": "13",
+      "position": { "x": 100, "y": 300 },
+      "type": "quotenote",
+      "content": "愿此行，终抵群星",
       "options": {
-        "imageWidth": "160px",
-        "customStyleName": "filter1"
+        "backgroundColor": "rgba(255, 255, 204, 0.7)",
+        "userName": "鸿"
+      }
+    },
+    {
+      "id": "14",
+      "position": { "x": 400, "y": 300 },
+      "type": "quotenote",
+      "content": "高考假明明就是高二生的断头饭",
+      "options": {
+        "backgroundColor": "rgba(255, 204, 255, 0.7)",
+        "userName": "体育生（188 黑皮 八块腹肌 卷毛）"
       }
     }
   ]
 }
+
