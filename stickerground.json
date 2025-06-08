@@ -1,0 +1,101 @@
+{
+  "backgroundImageUrl": "/images/background1.png",
+  "canvasPosition": { "x": 0, "y": 0 },
+  "stickers": [
+            {
+      "id": "1",
+      "position": { "x": 550, "y": -20 },
+      "type": "note",
+      "content": "Time flies but I am the pilot.",
+      "options": {
+        "backgroundColor": "rgba(255,,255,255,1)",
+        "userName": "基层群众自闭",
+        "customStyleName": "filter4"
+      }
+    },
+
+    {
+      "id": "10",
+      "position": { "x": 100, "y": 100 },
+      "type": "quotenote",
+      "content": "是断头饭",
+      "options": {
+        "backgroundColor": "rgba(255, 204, 204, 0.7)",
+        "userName": "基层群众自闭"
+      }
+    },
+    {
+      "id": "11",
+      "position": { "x": 400, "y": 100 },
+      "type": "quotenote",
+      "content": "#fyp#中中混血#美式男孩yh#justnow#in my feelings#卷毛#微分碎盖",
+      "options": {
+        "backgroundColor": "rgba(204, 255, 204, 0.7)",
+        "userName": "Echo"
+      }
+    },
+    {
+      "id": "12",
+      "position": { "x": 700, "y": 50 },
+
+      "type": "imageNote",
+      "content": "/images/001.jpg",
+      "options": {
+        "imageWidth": "200px",
+        "backgroundColor": "#ffff99",
+        "imageDescription": "做你自己，凌驾伤痕",
+        "userName": "Darwin"
+      }
+    },
+    {
+      "id": "13",
+      "position": { "x": 1000, "y": 100 },
+      "type": "quotenote",
+      "content": "愿此行，终抵群星",
+      "options": {
+        "backgroundColor": "rgba(255, 255, 204, 0.7)",
+        "userName": "鸿"
+      }
+    },
+    {
+      "id": "14",
+      "position": { "x": 100, "y": 300 },
+      "type": "quotenote",
+      "content": "高考假明明就是高二生的断头饭",
+      "options": {
+        "backgroundColor": "rgba(255, 204, 255, 0.7)",
+        "userName": "体育生（188 黑皮 八块腹肌 卷毛）"
+      }
+    },
+    {
+      "id": "15",
+      "position": { "x": 400, "y": 300 },
+      "type": "quotenote",
+      "content": "晚安季延",
+      "options": {
+        "backgroundColor": "rgba(173, 216, 230, 0.7)",
+        "userName": "草帽一伙"
+      }
+    },
+    {
+      "id": "16",
+      "position": { "x": 700, "y": 300 },
+      "type": "quotenote",
+      "content": "祝一年后的大家毕业快乐\n高考假你不要走",
+      "options": {
+        "backgroundColor": "rgba(255, 228, 181, 0.7)",
+        "userName": "Nil"
+      }
+    },
+    {
+      "id": "17",
+      "position": { "x": 1000, "y": 300 },
+      "type": "quotenote",
+      "content": "故事依然在书写\n而你\n始终是那个\n拥有执笔权的人",
+      "options": {
+        "backgroundColor": "rgba(204, 255, 255, 0.7)",
+        "userName": "Charlie"
+      }
+    }
+  ]
+}
