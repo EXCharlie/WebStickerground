@@ -1,32 +1,39 @@
 {
   "backgroundImageUrl": "/images/background1.png",
-  "canvasPosition": { "x": 0, "y": 0 },
+  "canvasPosition": {
+    "x": 0,
+    "y": 0
+  },
   "stickers": [
-            {
+    {
       "id": "1",
-      "position": { "x": 550, "y": -20 },
-      "type": "note",
-      "content": "Time flies but I am the pilot.",
-      "options": {
-        "backgroundColor": "rgba(255,,255,255,1)",
-        "userName": "基层群众自闭",
-        "customStyleName": "filter4"
-      }
+      "position": {
+        "x": 100,
+        "y": -50
+      },
+      "type": "timeNote",
+      "options": {}
     },
-
     {
       "id": "10",
-      "position": { "x": 100, "y": 100 },
+      "position": {
+        "x": 100,
+        "y": 100
+      },
       "type": "quotenote",
       "content": "是断头饭",
       "options": {
         "backgroundColor": "rgba(255, 204, 204, 0.7)",
-        "userName": "基层群众自闭"
+        "userName": "基层群众自闭",
+        "customStyleName": "filter3"
       }
     },
     {
       "id": "11",
-      "position": { "x": 400, "y": 100 },
+      "position": {
+        "x": 400,
+        "y": 100
+      },
       "type": "quotenote",
       "content": "#fyp#中中混血#美式男孩yh#justnow#in my feelings#卷毛#微分碎盖",
       "options": {
@@ -36,8 +43,10 @@
     },
     {
       "id": "12",
-      "position": { "x": 700, "y": 50 },
-
+      "position": {
+        "x": 700,
+        "y": 50
+      },
       "type": "imageNote",
       "content": "/images/001.jpg",
       "options": {
@@ -49,17 +58,24 @@
     },
     {
       "id": "13",
-      "position": { "x": 1000, "y": 100 },
+      "position": {
+        "x": 1000,
+        "y": 100
+      },
       "type": "quotenote",
       "content": "愿此行，终抵群星",
       "options": {
         "backgroundColor": "rgba(255, 255, 204, 0.7)",
-        "userName": "鸿"
+        "userName": "鸿",
+        "customStyleName": "filter3"
       }
     },
     {
       "id": "14",
-      "position": { "x": 100, "y": 300 },
+      "position": {
+        "x": 100,
+        "y": 300
+      },
       "type": "quotenote",
       "content": "高考假明明就是高二生的断头饭",
       "options": {
@@ -69,7 +85,10 @@
     },
     {
       "id": "15",
-      "position": { "x": 400, "y": 300 },
+      "position": {
+        "x": 400,
+        "y": 300
+      },
       "type": "quotenote",
       "content": "晚安季延",
       "options": {
@@ -79,7 +98,10 @@
     },
     {
       "id": "16",
-      "position": { "x": 700, "y": 300 },
+      "position": {
+        "x": 700,
+        "y": 300
+      },
       "type": "quotenote",
       "content": "祝一年后的大家毕业快乐\n高考假你不要走",
       "options": {
@@ -88,13 +110,145 @@
       }
     },
     {
+      "id": "16s",
+      "position": {
+        "x": 720,
+        "y": 370
+      },
+      "type": "imageSticker",
+      "content": "/images/006.png",
+      "options": {
+        "imageWidth": "60px"
+      }
+    },
+    {
       "id": "17",
-      "position": { "x": 1000, "y": 300 },
+      "position": {
+        "x": 1000,
+        "y": 300
+      },
       "type": "quotenote",
       "content": "故事依然在书写\n而你\n始终是那个\n拥有执笔权的人",
       "options": {
         "backgroundColor": "rgba(204, 255, 255, 0.7)",
         "userName": "Charlie"
+      }
+    },
+    {
+      "id": "18",
+      "position": {
+        "x": 100,
+        "y": 500
+      },
+      "type": "quotenote",
+      "content": "山水万程 皆要好运",
+      "options": {
+        "backgroundColor": "rgba(255, 204, 255, 0.7)",
+        "userName": "🍯"
+      }
+    },
+    {
+      "id": "19",
+      "position": {
+        "x": 400,
+        "y": 500
+      },
+      "type": "quotenote",
+      "content": "我命由天不由我#求意义#嗯宝续 -哪扎",
+      "options": {
+        "backgroundColor": "rgba(204, 255, 204, 0.7)",
+        "userName": "pyokiii🌰",
+        "customStyleName": "filter3"
+      }
+    },
+    {
+      "id": "19s",
+      "position": {
+        "x": 380,
+        "y": 590
+      },
+      "type": "imageNote",
+      "content": "/images/003.jpg",
+      "options": {
+        "backgroundColor": "rgba(204, 255, 204, 0.7)",
+        "imageWidth": "80px"
+      }
+    },
+    {
+      "id": "20",
+      "position": {
+        "x": 700,
+        "y": 500
+      },
+      "type": "note",
+      "content": "Time flies but I am the pilot.",
+      "options": {
+        "backgroundColor": "rgba(255, 255, 255, 1)",
+        "customStyleName": "filter4"
+      }
+    },
+    {
+      "id": "21",
+      "position": {
+        "x": 700,
+        "y": 600
+      },
+      "type": "note",
+      "content": "你终究会成为你正在成为的人。",
+      "options": {
+        "backgroundColor": "rgba(255, 255, 255, 1)",
+        "customStyleName": "filter4"
+      }
+    },
+    {
+      "id": "22",
+      "position": {
+        "x": 1000,
+        "y": 500
+      },
+      "type": "imageNote",
+      "content": "/images/002.jpg",
+      "options": {
+        "imageWidth": "200px",
+        "backgroundColor": "#ffebee",
+        "userName": "Twinkle"
+      }
+    },
+    {
+      "id": "23",
+      "position": {
+        "x": 100,
+        "y": 700
+      },
+      "type": "quotenote",
+      "content": "\n\n\n",
+      "options": {
+        "backgroundColor": "rgba(204, 204, 255, 0.7)",
+        "userName": "废物点心"
+      }
+    },
+    {
+      "id": "23s1",
+      "position": {
+        "x": 120,
+        "y": 720
+      },
+      "type": "imageSticker",
+      "content": "/images/007.png",
+      "options": {
+        "imageWidth": "80px"
+      }
+    },
+    {
+      "id": "23s1",
+      "position": {
+        "x": 220,
+        "y": 720
+      },
+      "type": "imageSticker",
+      "content": "/images/008.png",
+      "options": {
+        "imageWidth": "80px"
       }
     }
   ]
