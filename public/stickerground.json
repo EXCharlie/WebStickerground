@@ -29,6 +29,18 @@
       }
     },
     {
+      "id": "10s1",
+      "position": {
+        "x": 120,
+        "y": 190
+      },
+      "type": "imageSticker",
+      "content": "/images/010.png",
+      "options": {
+        "imageWidth": "80px"
+      }
+    },
+    {
       "id": "11",
       "position": {
         "x": 400,
@@ -39,6 +51,18 @@
       "options": {
         "backgroundColor": "rgba(204, 255, 204, 0.7)",
         "userName": "Echo"
+      }
+    },
+    {
+      "id": "11s1",
+      "position": {
+        "x": 420,
+        "y": 190
+      },
+      "type": "imageSticker",
+      "content": "/images/011.png",
+      "options": {
+        "imageWidth": "80px"
       }
     },
     {
@@ -68,6 +92,18 @@
         "backgroundColor": "rgba(255, 255, 204, 0.7)",
         "userName": "鸿",
         "customStyleName": "filter3"
+      }
+    },
+    {
+      "id": "13s1",
+      "position": {
+        "x": 1020,
+        "y": 160
+      },
+      "type": "imageSticker",
+      "content": "/images/012.png",
+      "options": {
+        "imageWidth": "80px"
       }
     },
     {
@@ -145,6 +181,18 @@
       "options": {
         "backgroundColor": "rgba(255, 204, 255, 0.7)",
         "userName": "🍯"
+      }
+    },
+    {
+      "id": "18s1",
+      "position": {
+        "x": 120,
+        "y": 560
+      },
+      "type": "imageSticker",
+      "content": "/images/009.jpg",
+      "options": {
+        "imageWidth": "80px"
       }
     },
     {
@@ -240,7 +288,7 @@
       }
     },
     {
-      "id": "23s1",
+      "id": "23s2",
       "position": {
         "x": 220,
         "y": 720
@@ -249,6 +297,71 @@
       "content": "/images/008.png",
       "options": {
         "imageWidth": "80px"
+      }
+    },
+    {
+      "id": "24",
+      "position": {
+        "x": 700,
+        "y": 700
+      },
+      "type": "quotenote",
+      "content": "弱肉强食，适者生存",
+      "options": {
+        "backgroundColor": "rgba(204, 204, 204, 0.7)",
+        "userName": "Ivan"
+      }
+    },
+    {
+      "id": "24",
+      "position": {
+        "x": 1000,
+        "y": 700
+      },
+      "type": "quotenote",
+      "content": "提前祝大家高考顺利，金榜题名吧！",
+      "options": {
+        "backgroundColor": "rgba(204, 244, 114, 0.7)",
+        "userName": "D.FISH.🐟"
+      }
+    },
+    {
+      "id": "25",
+      "position": {
+        "x": 100,
+        "y": 900
+      },
+      "type": "quotenote",
+      "content": "校园恶霸[Duh]\n\n\n\n\n",
+      "options": {
+        "backgroundColor": "rgba(244, 180, 204, 0.7)",
+        "userName": "shadow"
+      }
+    },
+    {
+      "id": "25s1",
+      "position": {
+        "x": 120,
+        "y": 950
+      },
+      "type": "imageSticker",
+      "content": "/images/013.png",
+      "options": {
+        "imageWidth": "80px"
+      }
+    },
+    {
+      "id": "26",
+      "position": {
+        "x": 400,
+        "y": 900
+      },
+      "type": "quotenote",
+      "content": "明年此日青云去，\n却笑人间举子忙。",
+      "options": {
+        "backgroundColor": "rgba(254, 180, 150, 0.7)",
+        "userName": "鹤眠",
+        "customStyleName": "filter3"
       }
     }
   ]
