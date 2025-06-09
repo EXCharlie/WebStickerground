@@ -1,6 +1,5 @@
 {
   "backgroundImageUrl": "/images/background1.png",
-
   "canvasPosition": {
     "x": 0,
     "y": 0
@@ -29,7 +28,7 @@
         "customStyleName": "filter3"
       }
     },
-        {
+    {
       "id": "10s1",
       "position": {
         "x": 120,
@@ -48,14 +47,13 @@
         "y": 100
       },
       "type": "quotenote",
-      "content": "#fyp#中中混血#美式男孩yh#justnow#in my feelings#卷毛#微分碎盖",
+      "content": "#fyp#中中混血#justnow#in my feelings#卷毛#微分碎盖",
       "options": {
         "backgroundColor": "rgba(204, 255, 204, 0.7)",
         "userName": "Echo"
       }
     },
-
-        {
+    {
       "id": "11s1",
       "position": {
         "x": 420,
@@ -67,7 +65,6 @@
         "imageWidth": "80px"
       }
     },
-
     {
       "id": "12",
       "position": {
@@ -97,7 +94,7 @@
         "customStyleName": "filter3"
       }
     },
-        {
+    {
       "id": "13s1",
       "position": {
         "x": 1020,
@@ -185,7 +182,8 @@
         "backgroundColor": "rgba(255, 204, 255, 0.7)",
         "userName": "🍯"
       }
-    },    {
+    },
+    {
       "id": "18s1",
       "position": {
         "x": 120,
@@ -301,7 +299,21 @@
         "imageWidth": "80px"
       }
     },
-        {
+    {
+      "id": "27",
+      "position": {
+        "x": 400,
+        "y": 750
+      },
+      "type": "quotenote",
+      "content": "希望高考后大家还能经常相见，做一辈子的好朋友",
+      "options": {
+        "backgroundColor": "rgba(218, 238, 245, 0.7)",
+        "userName": "吃一口",
+        "customStyleName": "filter4"
+      }
+    },
+    {
       "id": "24",
       "position": {
         "x": 700,
@@ -313,7 +325,8 @@
         "backgroundColor": "rgba(204, 204, 204, 0.7)",
         "userName": "Ivan"
       }
-    },{
+    },
+    {
       "id": "24",
       "position": {
         "x": 1000,
@@ -350,7 +363,34 @@
       "options": {
         "imageWidth": "80px"
       }
+    },
+    {
+      "id": "26",
+      "position": {
+        "x": 400,
+        "y": 900
+      },
+      "type": "quotenote",
+      "content": "明年此日青云去，\n却笑人间举子忙。",
+      "options": {
+        "backgroundColor": "rgba(254, 180, 150, 0.7)",
+        "userName": "鹤眠",
+        "customStyleName": "filter3"
+      }
+    },
+    {
+      "id": "28",
+      "position": {
+        "x": 700,
+        "y": 900
+      },
+      "type": "note",
+      "content": "山月不知心里事，\n水风空落眼前花，\n摇曳碧云斜。",
+      "options": {
+        "backgroundColor": "rgba(255, 245, 245, 0.7)",
+        "userName": "吃一口",
+        "customStyleName": "filter4"
+      }
     }
-
   ]
 }
