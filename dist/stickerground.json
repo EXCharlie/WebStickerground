@@ -1,6 +1,6 @@
 {
   "backgroundImageUrl": "/images/background1.png",
-  
+
   "canvasPosition": {
     "x": 0,
     "y": 0
@@ -250,6 +250,19 @@
       "content": "/images/008.png",
       "options": {
         "imageWidth": "80px"
+      }
+    },
+        {
+      "id": "24",
+      "position": {
+        "x": 700,
+        "y": 700
+      },
+      "type": "quotenote",
+      "content": "弱肉强食，适者生存",
+      "options": {
+        "backgroundColor": "rgba(204, 204, 204, 0.7)",
+        "userName": "Ivan"
       }
     }
   ]
