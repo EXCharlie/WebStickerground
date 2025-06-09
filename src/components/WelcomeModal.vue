@@ -12,10 +12,9 @@ const emit = defineEmits(['close']);
       <p>Some people say that the holiday during the college entrance examination is the last dinner（最后的晚餐） for senior high
         school sophomores. Share your thoughts.</p>
       <div class="feature-list">
-        <div>👂 We listen,We don't judge.</div>
-        <div>🌿 Keep harmonious words.</div>
+        <div>🎨 drag canvas to move.</div>
         <div>📖 Leave some thoughts for our high school life.</div>
-        <div>🌟 Share experience for school life.</div>
+        <div>🌟 Share experience or any advice.</div>
       </div>
       <button class="primary" @click="emit('close')">Got it!</button>
     </div>

@@ -128,6 +128,11 @@ onUnmounted(() => {
     window.removeEventListener('touchmove', onTouchMove);
     window.removeEventListener('touchend', onTouchEnd);
 });
+
+const getBaseUrl = (path) => {
+ return `${process.env.BASE_URL}${path.startsWith('/') ? path.substring(1) : path}`;
+};
+
 </script>
 
 <template>
@@ -138,14 +143,14 @@ onUnmounted(() => {
         </template>
 
         <template v-if="sticker.type === 'imageNote'">
-            <img :src="sticker.content" :alt="sticker.options.imageDescription"
+            <img :src="getBaseUrl(sticker.content)" :alt="sticker.options.imageDescription"
                 :style="{ width: sticker.options.imageWidth, height: sticker.options.imageHeight || 'auto' }">
             <p v-if="sticker.options.imageDescription">{{ sticker.options.imageDescription }}</p>
             <div v-if="sticker.options.userName" class="quote-user-name">- {{ sticker.options.userName }}</div>
         </template>
 
         <template v-if="sticker.type === 'imageSticker'">
-            <img :src="sticker.content"
+            <img :src="getBaseUrl(sticker.content)"
                 :style="{ width: sticker.options.imageWidth, height: sticker.options.imageHeight || 'auto' }">
         </template>
 

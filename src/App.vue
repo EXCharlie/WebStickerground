@@ -25,9 +25,10 @@ const handlePositionUpdate = ({ id, position }) => {
     updateStickerPosition(id, { x: position.x, y: position.y });
 };
 
+
 const backgroundStyle = computed(() => ({
     backgroundColor: pageBackgroundColor.value,
-    backgroundImage: backgroundImageUrl.value ? `url(${backgroundImageUrl.value})` : 'none',
+    backgroundImage: backgroundImageUrl.value ? `url(${process.env.BASE_URL}${backgroundImageUrl.value.startsWith('/') ? backgroundImageUrl.value.substring(1) : backgroundImageUrl.value})` : 'none',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -90,7 +91,7 @@ onMounted(() => {
     window.addEventListener('touchmove', onTouchMove, { passive: false });
     window.addEventListener('touchend', onTouchEnd);
 
-    fetch('/stickerground.json')
+    fetch(`${process.env.BASE_URL}stickerground.json`)
         .then(response => response.json())
         .then(data => loadStickers(data))
         .catch(error => console.error("Failed to load initial sticker data:", error));
