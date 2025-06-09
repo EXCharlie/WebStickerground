@@ -264,6 +264,19 @@
         "backgroundColor": "rgba(204, 204, 204, 0.7)",
         "userName": "Ivan"
       }
+    },{
+      "id": "24",
+      "position": {
+        "x": 1000,
+        "y": 700
+      },
+      "type": "quotenote",
+      "content": "提前祝大家高考顺利，金榜题名吧！",
+      "options": {
+        "backgroundColor": "rgba(204, 244, 114, 0.7)",
+        "userName": "D.FISH.🐟"
+      }
     }
+
   ]
 }
