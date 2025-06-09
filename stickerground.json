@@ -391,6 +391,19 @@
         "userName": "吃一口",
         "customStyleName": "filter4"
       }
+    },
+    {
+      "id": "29",
+      "position": {
+        "x": 1000,
+        "y": 900
+      },
+      "type": "quotenote",
+      "content": "坚定地和自己站在一起\n吵吵的日子再快一点😈",
+      "options": {
+        "backgroundColor": "rgba(220, 255, 230, 0.7)",
+        "userName": "iM"
+      }
     }
   ]
 }
