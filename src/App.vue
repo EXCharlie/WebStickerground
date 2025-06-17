@@ -13,7 +13,7 @@ const {
     canvasPosition, 
     loadStickers, 
     updateStickerPosition, 
-    updateCanvasPosition 
+    updateCanvasPosition,
 } = useStickers();
 
 const showWelcomeModal = ref(true);
@@ -35,7 +35,7 @@ const backgroundStyle = computed(() => ({
 }));
 
 const onCanvasMouseDown = (e) => {
-    if (e.target.id === 'stickerground') {
+    if (e.target.id === 'stickerground' ) {
         isDraggingCanvas.value = true;
         dragStartPos.value = { x: e.clientX, y: e.clientY };
     }
@@ -115,7 +115,7 @@ const stickerContainerStyle = computed(() => ({
 </script>
 
 <template>
-   <div class="app" v-title title="这是标题"></div>
+
     <div 
         id="stickerground" 
         :style="backgroundStyle"
@@ -149,4 +149,3 @@ const stickerContainerStyle = computed(() => ({
     cursor: grabbing;
 }
 </style>
-[file content end]

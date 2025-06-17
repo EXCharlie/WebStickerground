@@ -12,7 +12,7 @@ const props = defineProps({
 });
 
 const emit = defineEmits(['update-position']);
-const { isDraggable, canvasPosition } = useStickers();
+const { isDraggable, canvasPosition, updateCanvasPosition } = useStickers();
 const elementRef = ref(null);
 
 watch(() => props.sticker.position, (newPosition) => {
@@ -27,17 +27,25 @@ const zIndex = ref(1);
 
 let offsetX = 0;
 let offsetY = 0;
+let dragStartPos = { x: 0, y: 0 };
 
 // 鼠标事件处理
 const onMouseDown = (event) => {
-    if (!isDraggable.value || !elementRef.value) return;
-    isDragging.value = true;
-    zIndex.value = 100;
-    const rect = elementRef.value.getBoundingClientRect();
-    offsetX = event.clientX - rect.left;
-    offsetY = event.clientY - rect.top;
-    window.addEventListener('mousemove', onMouseMove);
-    window.addEventListener('mouseup', onMouseUp);
+    if (!elementRef.value) return;
+    if (isDraggable.value) {
+        isDragging.value = true;
+        zIndex.value = 100;
+        const rect = elementRef.value.getBoundingClientRect();
+        offsetX = event.clientX - rect.left;
+        offsetY = event.clientY - rect.top;
+        window.addEventListener('mousemove', onMouseMove);
+        window.addEventListener('mouseup', onMouseUp);
+    } else {
+
+        dragStartPos = { x: event.clientX, y: event.clientY };
+        window.addEventListener('mousemove', onCanvasMouseMove);
+        window.addEventListener('mouseup', onCanvasMouseUp);
+    }
 };
 
 const onMouseMove = (event) => {
@@ -57,24 +65,45 @@ const onMouseUp = () => {
     window.removeEventListener('mouseup', onMouseUp);
 };
 
+const onCanvasMouseMove = (event) => {
+    const deltaX = event.clientX - dragStartPos.x;
+    const deltaY = event.clientY - dragStartPos.y;
+    updateCanvasPosition(deltaX, deltaY);
+    dragStartPos = { x: event.clientX, y: event.clientY };
+};
+
+const onCanvasMouseUp = () => {
+    window.removeEventListener('mousemove', onCanvasMouseMove);
+    window.removeEventListener('mouseup', onCanvasMouseUp);
+};
+
 // 触摸事件处理
 const onTouchStart = (event) => {
-    if (!isDraggable.value || !elementRef.value || event.touches.length !== 1) return;
-    isDragging.value = true;
-    zIndex.value = 100;
-    const rect = elementRef.value.getBoundingClientRect();
-    offsetX = event.touches[0].clientX - rect.left;
-    offsetY = event.touches[0].clientY - rect.top;
-    window.addEventListener('touchmove', onTouchMove, { passive: false });
-    window.addEventListener('touchend', onTouchEnd);
-    event.preventDefault(); // 防止触摸滚动
+    if (!elementRef.value || event.touches.length !== 1) return;
+    if (isDraggable.value) {
+
+        isDragging.value = true;
+        zIndex.value = 100;
+        const rect = elementRef.value.getBoundingClientRect();
+        offsetX = event.touches[0].clientX - rect.left;
+        offsetY = event.touches[0].clientY - rect.top;
+        window.addEventListener('touchmove', onTouchMove, { passive: false });
+        window.addEventListener('touchend', onTouchEnd);
+        event.preventDefault();
+    } else {
+
+        dragStartPos = { x: event.touches[0].clientX, y: event.touches[0].clientY };
+        window.addEventListener('touchmove', onCanvasTouchMove, { passive: false });
+        window.addEventListener('touchend', onCanvasTouchEnd);
+        event.preventDefault(); 
+    }
 };
 
 const onTouchMove = (event) => {
     if (!isDragging.value || event.touches.length !== 1) return;
     position.value.x = event.touches[0].clientX - offsetX - canvasPosition.value.x;
     position.value.y = event.touches[0].clientY - offsetY - canvasPosition.value.y;
-    event.preventDefault(); // 防止触摸滚动
+    event.preventDefault(); 
 };
 
 const onTouchEnd = () => {
@@ -86,6 +115,20 @@ const onTouchEnd = () => {
 
     window.removeEventListener('touchmove', onTouchMove);
     window.removeEventListener('touchend', onTouchEnd);
+};
+
+const onCanvasTouchMove = (event) => {
+    if (event.touches.length !== 1) return;
+    const deltaX = event.touches[0].clientX - dragStartPos.x;
+    const deltaY = event.touches[0].clientY - dragStartPos.y;
+    updateCanvasPosition(deltaX, deltaY);
+    dragStartPos = { x: event.touches[0].clientX, y: event.touches[0].clientY };
+    event.preventDefault(); // 防止触摸滚动
+};
+
+const onCanvasTouchEnd = () => {
+    window.removeEventListener('touchmove', onCanvasTouchMove);
+    window.removeEventListener('touchend', onCanvasTouchEnd);
 };
 
 const currentTime = ref('');
@@ -119,7 +162,7 @@ const stickerStyle = computed(() => ({
     zIndex: zIndex.value,
     cursor: isDraggable.value ? 'grab' : 'default',
     backgroundColor: props.sticker.options.backgroundColor,
-    touchAction: 'none' // 禁用默认触摸行为
+    touchAction: 'none' 
 }));
 
 onUnmounted(() => {
@@ -174,9 +217,17 @@ const getBaseUrl = (path) => {
     backdrop-filter: blur(10px);
     padding: 20px;
     user-select: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* 防止文本选择 */
 }
-
+.quotenote:hover {
+    transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25), inset 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.imageNote:hover {
+    transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25), inset 0 0 20px rgba(0, 0, 0, 0.15);
+}
 .quote-user-name {
     font-style: italic;
     opacity: 0.5;
@@ -256,6 +307,8 @@ const getBaseUrl = (path) => {
     text-align: center;
 }
 
+
+
 .mark-style2 {
     width: 250px;
     font-size: 64px;
@@ -269,5 +322,30 @@ const getBaseUrl = (path) => {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.mark-style3 {
+    font-weight: 900;
+      background: linear-gradient(90deg,  #ffd7a3, #ffebcc, #e6f7ff, #cce6ff, #b3d9ff);
+    background-size: 400% 400%;
+    animation: gradient 10s linear infinite;
+    opacity: 0.9;
+
+}
+
+
+.mark-style4 {
+    position: relative;
+    font-weight: 900;
+    background: #000; /* 黑色背景 */
+    color: #ffd700; /* 金色文字 */
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.5), 0 0 60px rgba(255, 215, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mark-style4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.9), 0 0 50px rgba(255, 215, 0, 0.8), 0 0 70px rgba(255, 215, 0, 0.7);
 }
 </style>

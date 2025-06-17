@@ -6,11 +6,14 @@ import SettingsModal from './SettingsModal.vue';
 
 const showAddModal = ref(false);
 const showSettingsModal = ref(false);
+//默认隐藏添加按钮
+const showAddButton = ref(false);
+
 </script>
 
 <template>
     <div class="nav">
-        <button @click="showAddModal = true" class="nav-button">+</button>
+        <button v-if="showAddButton" @click="showAddModal = true" class="nav-button">+</button>
         <button @click="showSettingsModal = true" class="nav-button">⚙️</button>
     </div>
 
